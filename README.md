@@ -122,53 +122,6 @@ The system prompt instructs the model to: *rewrite for clarity and brevity, pres
 
 ---
 
-## 🌐 Deployment
-
-### ⚠️ Vercel — Not Compatible
-
-Streamlit apps are persistent Python web servers. Vercel is designed for serverless functions and static frontends. **Streamlit cannot be deployed on Vercel.** It needs a persistent server process that Vercel's architecture does not support.
-
----
-
-### ✅ Option 1 — Streamlit Community Cloud (Recommended, Free)
-
-This is the official, zero-configuration way to deploy a Streamlit app publicly.
-
-1. Push your code to a **public GitHub repo**
-2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub
-3. Click **New app**
-4. Select your repo, branch (`main`), and entry point (`app.py`)
-5. Click **Deploy**
-
-Your app gets a free public URL like `https://your-app.streamlit.app`. Dependencies from `requirements.txt` are installed automatically.
-
-> No API keys go in the deploy config — users enter their own keys in the sidebar at runtime.
-
----
-
-### ✅ Option 2 — Hugging Face Spaces (Also Free, Very Simple)
-
-1. Go to [huggingface.co/new-space](https://huggingface.co/new-space)
-2. Name your Space (e.g. `mono-void`)
-3. Set **SDK** to `Streamlit`
-4. Upload `app.py`, `requirements.txt`, and `.streamlit/config.toml`
-5. The Space builds automatically and gives you a public URL
-
----
-
-### ✅ Option 3 — Railway / Render
-
-Both platforms support persistent Python web servers.
-
-**Start command for both:**
-```bash
-streamlit run app.py --server.port $PORT --server.address 0.0.0.0
-```
-
-Connect your GitHub repo and they handle the rest. Both have free tiers.
-
----
-
 ## 🛡️ Privacy & Security
 
 - **API keys are session-only.** They live in Streamlit's session state for your browser session only. They are never written to disk, logged, or transmitted anywhere other than the official LLM provider endpoint.
@@ -186,10 +139,3 @@ Connect your GitHub repo and they handle the rest. Both have free tiers.
 
 ---
 
-## 📄 License
-
-MIT — do whatever you want with it.
-
----
-
-*Made with a quiet kind of care.*
