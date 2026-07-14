@@ -1,7 +1,5 @@
 ﻿# ✨ Mono Void
 
-**Deployed** : https://mono-void.onrender.com/
-
 > *A calm space to refine your prompts — so every LLM interaction counts.*
 
 Mono Void is a minimalist, beautifully designed **prompt refinement workspace** built with Streamlit. You write a message, choose your LLM (paid API or local), hit **Transmit**, and Mono Void sends it through an intelligent rewriting system that returns a cleaner, sharper version of your prompt — using fewer tokens while keeping all the intent intact.
